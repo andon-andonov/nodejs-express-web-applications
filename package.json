@@ -1,5 +1,5 @@
 {
-  "name": "library",
+  "name": "nodejs-express-web-applications",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
@@ -7,11 +7,13 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
+    "bootstrap": "^4.3.1",
     "chalk": "^2.4.2",
-    "debug": "^4.1.1",
     "express": "^4.17.1",
-    "morgan": "^1.9.1"
+    "jquery": "^3.4.1",
+    "morgan": "^1.9.1",
+    "popper.js": "^1.15.0"
   }
 }
