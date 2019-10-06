@@ -4,6 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
+    "start": "DEBUG=app node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -11,9 +12,15 @@
   "dependencies": {
     "bootstrap": "^4.3.1",
     "chalk": "^2.4.2",
+    "debug": "^4.1.1",
     "express": "^4.17.1",
     "jquery": "^3.4.1",
     "morgan": "^1.9.1",
     "popper.js": "^1.15.0"
+  },
+  "devDependencies": {
+    "eslint": "^6.5.1",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2"
   }
 }
