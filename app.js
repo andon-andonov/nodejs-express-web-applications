@@ -10,7 +10,7 @@ const port = process.env.PORT || 4000;
 app.use(morgan('tiny'));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/css', express.static(path.join(__dirname, 'node_modules/bootstrap/dist/css')));
-app.use('/js', express.static(path.join(__dirname, 'node_modules/popper.js/dist')));
+app.use('/js', express.static(path.join(__dirname, 'node_modules/popper.js/dist/umd')));
 app.use('/js', express.static(path.join(__dirname, 'node_modules/jquery/dist')));
 app.use('/js', express.static(path.join(__dirname, 'node_modules/bootstrap/dist/js')));
 app.set('view engine', 'ejs');
