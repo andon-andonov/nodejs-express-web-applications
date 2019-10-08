@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+  <title><%= title %></title>
+</head>
+
+<body>
+  <div class="container">
+    <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
+      <a class="navbar-brand" href="/"><%= title %></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link" href="/">Home</a>
+          <% for (let i = 0; i < nav.length; i++) { %>
+          <a class="nav-item nav-link" href="<%= nav[i].link %>"><%= nav[i].title %></a>
+          <% } %>
+        </div>
+      </div>
+    </nav>
+
+    <section class="pt-5">
+
+      <!-- Heading & Description -->
+      <div class="wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
+        <!--Section heading-->
+        <h2 class="h1 text-center mb-5"><%= title %></h2>
+      </div>
+      <!-- Heading & Description -->
+
+      <!--Grid row-->
+      <div class="row mt-3 wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
+        <!--Grid column-->
+        <div class="col-lg-5 col-xl-4 mb-4">
+          <!--Featured image-->
+          <div class="view overlay rounded z-depth-1">
+            <img src="http://lorempixel.com/1200/630/" class="img-fluid" alt="">
+            <a href="#" target="_blank">
+              <div class="mask rgba-white-slight waves-effect waves-light"></div>
+            </a>
+          </div>
+        </div>
+        <!--Grid column-->
+        <!--Grid column-->
+        <div class="col-lg-7 col-xl-7 ml-xl-4 mb-4">
+          <h3 class="mb-3 font-weight-bold dark-grey-text">
+            <strong><%= book.title %></strong>
+          </h3>
+          <p class="grey-text">
+            <dl class="row">
+              <dt class="col-sm-3">Author</dt>
+              <dd class="col-sm-9"><%= book.author %></dd>
+              <dt class="col-sm-3">Genre</dt>
+              <dd class="col-sm-9"><%= book.genre %></dd>
+              <dt class="col-sm-3">Read</dt>
+              <dd class="col-sm-9"><%= book.read %></dd>
+            </dl>
+          </p>
+        </div>
+        <!--Grid column-->
+      </div>
+      <!--Grid row-->
+      <hr class="mb-5">
+
+    </section>
+  </div>
+
+  <script src="/js/jquery.slim.min.js"></script>
+  <script src="/js/popper.min.js"></script>
+  <script src="/js/bootstrap.min.js"></script>
+</body>
+
+</html>
