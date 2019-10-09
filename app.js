@@ -3,7 +3,12 @@ const chalk = require('chalk');
 const debug = require('debug')('app');
 const morgan = require('morgan');
 const path = require('path');
-const bookRouter = require('./src/routes/bookRoutes');
+
+const nav = [
+  { link: '/books', title: 'Books' },
+  { link: '/authors', title: 'Authors' },
+];
+const bookRouter = require('./src/routes/bookRoutes')(nav);
 
 const app = express();
 const port = process.env.PORT || 4000;
