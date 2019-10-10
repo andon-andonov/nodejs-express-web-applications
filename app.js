@@ -9,6 +9,7 @@ const nav = [
   { link: '/authors', title: 'Authors' },
 ];
 const bookRouter = require('./src/routes/bookRoutes')(nav);
+const adminRouter = require('./src/routes/adminRoutes')(nav);
 
 const app = express();
 const port = process.env.PORT || 4000;
@@ -22,6 +23,7 @@ app.use('/js', express.static(path.join(__dirname, 'node_modules/bootstrap/dist/
 app.set('view engine', 'ejs');
 app.set('views', './src/views');
 app.use('/books', bookRouter);
+app.use('/admin', adminRouter);
 
 app.get('/', (req, res) => {
   res.render('index', {
