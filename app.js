@@ -1,12 +1,13 @@
 const express = require('express');
 const chalk = require('chalk');
-const debug = require('debug')('app');
 const morgan = require('morgan');
 const path = require('path');
 const bodyParser = require('body-parser');
 const passport = require('passport');
 const cookieParser = require('cookie-parser');
 const session = require('express-session');
+require('dotenv').config();
+const debug = require('debug')('app');
 
 const nav = [
   { link: '/books', title: 'Books' },
